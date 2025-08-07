@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anagha Pradeep | AI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #0a0f1a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    header h1 {
+      font-family: cursive;
+      font-size: 2.5rem;
+      color: #00bfff;
+    }
+
+    header h2 {
+      margin-top: 1rem;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project h3 {
+      color: #00bfff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Anagha Pradeep</h1>
+    <h2>Designing Intelligent Systems That See, Learn, and Personalize in Real Time.</h2>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Passionate about building AI that responds in real time and resonates with people — not just machines. Blending machine learning, computer vision, and creative technology, I love crafting systems that feel intuitive, human-aware, and a little magical.</p>
+    <p>Currently pursuing a Master’s in Computer Science, I’ve worked on everything from real-time food recognition with CNNs to music genre classification using deep audio features. My approach combines strong model development with thoughtful UX — the kind that makes AI not just smart, but sensibly interactive.</p>
+    <p>Previously at Stellantis, I contributed to the development of digital instrument clusters using Unity and Qt, working at the intersection of automotive tech, UI design, and embedded systems.</p>
+    <p>When I’m not coding or experimenting with prompts, I’m probably sketching, rewatching anime, or dreaming up the next AI-powered side project.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>🍱 Food Identification & Calorie Recommendation</h3>
+      <p>Developed a real-time image classification system using CNNs to identify food items and estimate calories. Integrated preference learning to adapt to user habits.</p>
+    </div>
+    <div class="project">
+      <h3>🎶 Music Genre Classification</h3>
+      <p>Built a CNN-based classifier using MFCCs to identify music genres with 88% accuracy. Applied TensorFlow, Librosa, and cross-validation for robust modeling.</p>
+    </div>
+    <div class="project">
+      <h3>📚 Smart-Book Rental Platform</h3>
+      <p>Designed an AI-enhanced rental system with predictive inventory analytics and personalized book recommendations. Focused on user satisfaction and efficiency.</p>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>🚧 Blog section coming soon! I’ll be sharing insights on AI design, real-time systems, and creative tech experiments. Stay tuned.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: anaghapradeep1510@gmail.com</p>
+    <p>GitHub: https://github.com/Malusree-2001</p>
+    <p>LinkedIn: https://www.linkedin.com/in/anagha-pradeep-96049117a/</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anagha Pradeep. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Reveal sections on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>
